@@ -1,0 +1,73 @@
+@media (max-width: 1000px) {
+   .tablet{
+   
+      .tablet-grid{
+            
+         .tablet-bottom {
+            font-size: math.div(24, 1130)*95vw;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .tablet-main-body {
+      background-color: white;
+      color: $font-color;
+      border-top: 1px solid $line-color;
+   
+   
+      .tablet-flex-wrapper {
+         position: relative;
+         height: 664px;
+         
+         .tablet-big{
+            position: relative;
+            width: 88%;
+            margin: auto;
+            margin-top: 18%;
+            font-size: 30px;
+            top: 0;
+            left: 0;
+         }
+         .tablet-info{
+            position: relative;
+            margin-left: 5.5%;
+            margin-top: 25%;
+            font-size: 17px;
+            top: 0;
+            left: 0;
+         }
+      }
+
+      .tablet-middle {
+         width: 80%;
+      }
+   
+      .tablet-grid{
+         display: block;
+         width: 88%;
+         min-height: 800px;
+         margin: auto;
+         margin-top: 65px;
+         margin-bottom: 9.3%;
+         
+         .tablet-bottom {
+            font-size: 20px;
+            position: relative;
+            margin-top: 84px;
+            margin-bottom: 9.3%;
+         }
+   
+         .tablet-cutout {
+            margin: auto;
+            margin-bottom: 9.3%;
+            width: 80%;
+            height: 57.6vw;
+            background-image: url('./assets/DellaSpina/SPRDdigital_DellaSpina_izsek.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+         }
+      }
+   }
+}

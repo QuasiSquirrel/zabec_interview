@@ -1,0 +1,69 @@
+.desktop-gallery {
+   z-index: 2;
+   position: relative;
+   height: 590px;
+   max-height: 100vh;
+   background-color: $desktop-green;
+
+   .slider-container{
+      padding-bottom: 3.5%;
+      width: 85.5%;
+      height: 100%;
+
+      .slider-touch {
+
+         .slider-wrapper {
+            width: 100%;
+            margin: auto;
+
+            .slider-item {
+               background-position: center;
+               background-size: contain;
+               background-repeat: no-repeat;
+            }
+         }
+      }
+
+      .slider-pagination {
+         bottom: 4.5%;
+         left: 0;
+
+         .slider-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            opacity: 100;
+            background-color: black;
+         }
+
+         .slider-pagination-bullet-active {
+            background-color: white;
+         }
+      }
+   }
+
+   #arrow-left {
+      position: absolute;
+      top: 50%;
+      left: 0.5%;
+      width: 4.3%;
+      height: 5.7%;
+      transform: translateY(-50%);
+      background-image: url('./assets/arrow_left.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+   }
+
+   #arrow-right {
+      position: absolute;
+      top: 50%;
+      right: 0.5%;
+      width: 4.3%;
+      height: 5.7%;
+      transform: translateY(-50%);
+      background-image: url('./assets/arrow.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+   }
+}

@@ -1,28 +1,45 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" :class="device">
+    <WelcomeHeader :device="device"/>
+    <MainBody :device="device" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import WelcomeHeader from './components/WelcomeHeader.vue'
+import MainBody from './components/MainBody.vue'
+import { device } from './main'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+   name: 'App',
+   components: {
+      WelcomeHeader,
+      MainBody
+   },
+   data() {
+      return {
+         device: null
+      }
+   },
+   created(){
+      this.device = device['form_factor'].toLowerCase();
+      if(this.device === 'smartphone' || this.device === 'feature phone' || this.device === 'other mobile')
+         this.device = 'mobile'
+      else if(this.device === 'smart-tv' || this.device === 'other non-mobile')
+         this.device = 'desktop'
+
+      console.log(this.device)
+   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import './scss/desktop';
+@import './scss/mobile';
+@import './scss/tablet';
+
+*{
+   box-sizing: border-box;
+   margin: 0;
 }
 </style>

@@ -1,0 +1,16 @@
+@use "sass:math";
+@import "./scss/variables";
+@import "./scss/mobile/header";
+@import "./scss/mobile/mainbody";
+@import "./scss/mobile/media";
+
+.mobile{
+   font-size: 17px;
+   font-family: 'Gotham-Book';
+   line-height: 1.3;
+   position: relative;
+
+   .bold {
+      font-family: 'Gotham-Bold';
+   }
+}

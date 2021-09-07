@@ -1,0 +1,113 @@
+.mobile-header-wrapper{
+   z-index: -2;
+   position: relative;
+   width: 100%;
+   height: 817px;
+   background-color: $desktop-green;
+   margin: 0 0 42px 0;
+   padding-bottom: 50%;
+
+   .mobile-logo {
+      position: absolute;
+      top: 43px;
+      left: 5%;
+      width: 150px;
+      height: 84px;
+      background-image: url('./assets/logo_c.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+   }
+
+   .mobile-menu {
+      position: absolute;
+      top: 43px;
+      right: 22px;
+      width: 32px;
+      height: 20px;
+      background-image: url('./assets/menu_white.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+   }
+
+   .mobile-header {
+      position: absolute;
+      z-index: 1;
+      top: 152px;
+      left: -1px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .mobile-dashed-line {
+         height: 1px;
+         width: 52px;
+         margin: 0 0 0 19px;
+         background-image: url('./assets/Dashed_header.svg');
+      }
+
+      .mobile-header-description {
+         font-size: 17px;
+         width: 221px;
+         margin: 16px 0 25px 19px;
+         color: white;
+      }
+      
+      .mobile-header-content {
+         font-size: 48px;
+         line-height: 100%;
+         color: white;
+
+         .mobile-header-text {
+            position: relative;
+            display: inline;
+
+            .helper {
+               z-index: -1;
+               position: absolute;
+               width: 110%;
+               height: 97%;
+               top: 10%;       
+               background: rgba(0, 0, 0, 0.6);
+               border: 1px dashed white;
+
+               &::after{
+                  content: '';
+                  position: absolute;
+                  top: -7%;
+                  right: -3px;
+                  width: 6px;
+                  height: 6px;
+                  border: 1px solid $border-color;
+                  background-color: white;
+               }
+
+               &::before{
+                  content: '';
+                  position: absolute;
+                  top: 93%;
+                  right: -3px;
+                  width: 6px;
+                  height: 6px;
+                  border: 1px solid $border-color;
+                  background-color: white;
+               }
+            }
+         }
+      }
+   }
+
+   .mobile-sample-image {
+      z-index: -1;
+      position: absolute;
+      top: 56.8%;
+      left: 50%;
+      width: 80%;
+      height: 200%;
+      max-height: 580px;
+      transform: translateX(-50%);
+      background-image: url('./assets/DellaSpina/SPRDdigital_DellaSpina_naslovna_telefon_listing.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+   }
+}

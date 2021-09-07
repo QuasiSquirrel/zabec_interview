@@ -1,0 +1,23 @@
+@font-face {
+   font-family: 'Gotham-Bold';
+   src: local('Gotham Bold');
+   src: local('Gotham-Bold');
+   src: url('./assets/Gotham-Bold.otf') format('opentype');
+}
+@font-face {
+   font-family: 'Gotham-Book';
+   src: local('Gotham Book');
+   src: local('Gotham-Book');
+   src: url('./assets/Gotham-Book.otf') format('opentype');
+}
+
+// colors
+$desktop-green: #86B998;
+$border-color: #365541;
+$line-color: #E5E5E5;
+$font-color: #1C1C1C;
+$anchor-color: #002A00;
+$legend-color: #797979;
+
+// font-size
+$regular-font: math.div(20, 1118)*95vw;

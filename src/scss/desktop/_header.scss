@@ -1,0 +1,164 @@
+.desktop-header-wrapper{
+   z-index: -2;
+   position: relative;
+   width: 95%;
+   background-color: $desktop-green;
+   margin: 2.5% 2.5% 42px 2.5%;
+   padding-bottom: 50%;
+
+   .desktop-logo {
+      position: absolute;
+      top: 8px;
+      left: 8%;
+      width: 13.25%;
+      height: 14.31%;
+      background-image: url('./assets/logo_c.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+   }
+
+   .desktop-menu {
+      position: absolute;
+      top: 8px;
+      right: 8.9%;
+      width: 32px;
+      height: 20px;
+      background-image: url('./assets/menu.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+   }
+
+   .desktop-header {
+      position: absolute;
+      z-index: 1;
+      top: 14.25%;
+      left: 10.5%;
+      width: 94.6%;
+      margin-left: -2.5%;
+      display: flex;
+
+      .desktop-dashed-line {
+         height: 1px;
+         width: 4.6%;
+         margin: 4.7% 1.03% 0 0;
+         background-image: url('./assets/Dashed_header.svg');
+      }
+
+      .desktop-header-description {
+         font-size: 17px;
+         width: 20.65%;
+         margin: 3.8% 4.5% 0 0 ;
+         color: white;
+      }
+      
+      .desktop-header-content {
+         font-size: 58.3333px;
+         line-height: 100%;
+         color: white;
+
+         .desktop-header-text {
+            position: relative;
+            display: inline;
+
+            .helper {
+               z-index: -1;
+               position: absolute;
+               width: 105%;
+               height: 95%;
+               top: 5%;
+               background: rgba(0, 0, 0, 0.6);
+               border: 1px dashed white;
+
+               &::after{
+                  content: '';
+                  position: absolute;
+                  top: -5%;
+                  right: -3px;
+                  width: 6px;
+                  height: 6px;
+                  border: 1px solid $border-color;
+                  background-color: white;
+               }
+
+               &::before{
+                  content: '';
+                  position: absolute;
+                  top: 95%;
+                  right: -3px;
+                  width: 6px;
+                  height: 6px;
+                  border: 1px solid $border-color;
+                  background-color: white;
+               }
+            }
+
+            .helper-two {
+               z-index: -1;
+               position: absolute;
+               width: calc(99.5% - 1px);
+               height: 95%;
+               top: 5%;       
+               background: rgba(0, 0, 0, 0.6);
+               border: 1px dashed white;
+
+               &::after{
+                  content: '';
+                  position: absolute;
+                  top: -5%;
+                  right: -3px;
+                  width: 6px;
+                  height: 6px;
+                  border: 1px solid $border-color;
+                  background-color: white;
+               }
+
+               &::before{
+                  content: '';
+                  position: absolute;
+                  top: 95%;
+                  right: -3px;
+                  width: 6px;
+                  height: 6px;
+                  border: 1px solid $border-color;
+                  background-color: white;
+               }
+            }
+
+            &::after {
+               content: '';
+               position: absolute;
+               top: 0;
+               left: -3px;
+               width: 6px;
+               height: 6px;
+               border: 1px solid black;
+               background-color: white;
+            }
+
+            &::before {
+               content: '';
+               position: absolute;
+               top: 95%;
+               left: -3px;
+               width: 6px;
+               height: 6px;
+               border: 1px solid black;
+               background-color: white;
+            }
+         }
+      }
+   }
+
+   .desktop-sample-image {
+      z-index: -1;
+      position: absolute;
+      top: 33.4%;
+      left: 50%;
+      width: 80%;
+      height: 100%;
+      transform: translateX(-50%);
+      background-image: url('./assets/DellaSpina/SPRDdigital_DellaSpina_naslovna_monitor_listing.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+   }
+}
