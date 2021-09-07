@@ -83,7 +83,7 @@
                &::before{
                   content: '';
                   position: absolute;
-                  top: 95%;
+                  top: 95.5%;
                   right: -3px;
                   width: 6px;
                   height: 6px;
@@ -115,7 +115,7 @@
                &::before{
                   content: '';
                   position: absolute;
-                  top: 95%;
+                  top: 95.5%;
                   right: -3px;
                   width: 6px;
                   height: 6px;
@@ -127,11 +127,11 @@
             &::after {
                content: '';
                position: absolute;
-               top: 0;
+               top: 1.5%;
                left: -3px;
                width: 6px;
                height: 6px;
-               border: 1px solid black;
+               border: 1px solid $border-color;
                background-color: white;
             }
 
@@ -142,7 +142,7 @@
                left: -3px;
                width: 6px;
                height: 6px;
-               border: 1px solid black;
+               border: 1px solid $border-color;
                background-color: white;
             }
          }
