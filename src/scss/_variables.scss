@@ -1,3 +1,9 @@
+@mixin absBg() {
+   position: absolute;
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
 @font-face {
    font-family: 'Gotham-Bold';
    src: local('Gotham Bold');
