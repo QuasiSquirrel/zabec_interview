@@ -1,4 +1,4 @@
-@media (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
    .desktop{
       .desktop-header-wrapper{
          .desktop-header {
@@ -6,7 +6,7 @@
                font-size: $regular-font;
             }         
             .desktop-header-content {
-               font-size: math.div(70, 1140)*95vw;
+               font-size: math.div(70, 1146)*95vw;
             }
          }
       }

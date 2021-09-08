@@ -14,4 +14,9 @@
    .bold {
       font-family: 'Gotham-Bold';
    }
+
+   &::-webkit-scrollbar{
+      width: 8px;
+      color: $desktop-green;
+   }
 }

@@ -41,5 +41,7 @@ export default {
 *{
    box-sizing: border-box;
    margin: 0;
+   scrollbar-width: thin;
+
 }
 </style>

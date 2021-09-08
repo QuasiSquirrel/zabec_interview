@@ -1,16 +1,4 @@
-@media (max-width: 1000px) {
-   .tablet{
-   
-      .tablet-grid{
-            
-         .tablet-bottom {
-            font-size: math.div(24, 1130)*95vw;
-         }
-      }
-   }
-}
-
-@media (max-width: 768px) {
+@media (orientation: portrait) and (min-width: 480px) {
    .tablet-main-body {
       background-color: white;
       color: $font-color;

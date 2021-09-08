@@ -1,7 +1,7 @@
 @mixin square() {
    content: '';
-   width: 6px;
-   height: 6px;
+   width: 8px;
+   height: 8px;
    position: absolute;
    border: 1px solid $border-color;
    background-color: white;
@@ -66,6 +66,7 @@
          color: white;
 
          .desktop-header-text {
+            z-index: 1;
             position: relative;
             display: inline;
 
@@ -81,13 +82,13 @@
                &::after{
                   @include square();
                   top: -5%;
-                  right: -3px;
+                  right: -4px;
                }
 
                &::before{
                   @include square();
                   top: 95.5%;
-                  right: -3px;
+                  right: -4px;
                }
             }
 
@@ -103,26 +104,26 @@
                &::after{
                   @include square();
                   top: -5%;
-                  right: -3px;
+                  right: -4px;
                }
 
                &::before{
                   @include square();
                   top: 95.5%;
-                  right: -3px;
+                  right: -4px;
                }
             }
 
             &::after {
                @include square();
                top: 1.5%;
-               left: -3px;
+               left: -4px;
             }
 
             &::before {
                @include square();
                top: 95%;
-               left: -3px;
+               left: -4px;
             }
          }
       }
