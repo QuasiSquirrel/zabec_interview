@@ -1,9 +1,16 @@
-.desktop-gallery {
+@mixin gallery {
+   .gallery {
    z-index: 2;
    position: relative;
    height: 590px;
    max-height: 100vh;
    background-color: $desktop-green;
+
+   @media screen and (min-width: 820px) {
+      width: 100%;
+      height: 59vw;
+   }
+
 
    .slider-container{
       padding-bottom: 3.5%;
@@ -67,5 +74,6 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+   }
    }
 }

@@ -1,7 +1,9 @@
-.tablet-gallery {
+@mixin gallery-tb{
+   .gallery {
    z-index: 2;
    position: relative;
-   height: 80vh;
+   height: 590px;
+   max-height: 100vh;
    background-color: $desktop-green;
 
    .slider-container{
@@ -38,5 +40,6 @@
             background-color: white;
          }
       }
+   }
    }
 }

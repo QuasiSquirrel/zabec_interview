@@ -42,6 +42,10 @@ export default {
    box-sizing: border-box;
    margin: 0;
    scrollbar-width: thin;
-
+   
+   &::-webkit-scrollbar{
+      width: 8px;
+      color: $desktop-green;
+   }
 }
 </style>

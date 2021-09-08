@@ -1,29 +1,29 @@
 <template>
-   <div :class="device + '-header-wrapper'">
-      <div :class="device + '-logo'"></div>
-      <div :class="device + '-menu'"></div>
-      <div :class="device + '-header'">
-         <div :class="device + '-dashed-line'"></div>
-         <div :class="device + '-header-description'">
+   <div class="header-wrapper">
+      <div class="logo"></div>
+      <div class="menu"></div>
+      <div class="header">
+         <div class="dashed-line"></div>
+         <div class="header-description">
             <p>Študija Primera</p>
             <p class="bold">Spletna Optika Della Spina</p>
          </div>
-         <div :class="[device + '-header-content', bold]" v-if="device === 'desktop'">
-            <div :class="[device + '-header-text', 'bold']"><div class="helper"></div>Inovativno do</div>
+         <div class="header-content bold">
+            <div class="header-text bold"><div class="helper"></div>Inovativno do</div>
             <br>
-            <div :class="[device + '-header-text', 'bold']"><div class="helper-two"></div>spletne prodaje očal</div>
+            <div class="header-text bold"><div class="helper-two"></div>spletne prodaje očal</div>
          </div>
-         <div :class="[device + '-header-content', bold]" v-if="device === 'mobile' || device === 'tablet'">
-            <div :class="[device + '-header-text', 'bold']"><div class="helper"></div>Smo</div>
+         <div class="header-content-alt bold">
+            <div class="header-text bold"><div class="helper"></div>Smo</div>
             <br>
-            <div :class="[device + '-header-text', 'bold']"><div class="helper"></div>najkulejša</div>
+            <div class="header-text bold"><div class="helper"></div>najkulejša</div>
             <br>
-            <div :class="[device + '-header-text', 'bold']"><div class="helper"></div>digitalna</div>
+            <div class="header-text bold"><div class="helper"></div>digitalna</div>
             <br>
-            <div :class="[device + '-header-text', 'bold']"><div class="helper"></div>agencija.</div>
+            <div class="header-text bold"><div class="helper"></div>agencija.</div>
          </div>
       </div>
-      <div :class="device + '-sample-image'"></div>
+      <div class="sample-image"></div>
    </div>
 </template>
 

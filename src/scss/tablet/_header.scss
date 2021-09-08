@@ -7,7 +7,8 @@
    background-color: white;
 };
 
-.tablet-header-wrapper{
+@mixin header-tb{
+   .header-wrapper{
    z-index: -2;
    position: relative;
    width: 100%;
@@ -16,7 +17,7 @@
    margin: 0 0 42px 0;
    padding-bottom: 50%;
 
-   .tablet-logo {
+   .logo {
       position: absolute;
       top: 43px;
       left: 5%;
@@ -27,7 +28,7 @@
       background-repeat: no-repeat;
    }
 
-   .tablet-menu {
+   .menu {
       position: absolute;
       top: 43px;
       right: 22px;
@@ -38,7 +39,7 @@
       background-repeat: no-repeat;
    }
 
-   .tablet-header {
+   .header {
       position: absolute;
       z-index: 1;
       top: 152px;
@@ -47,26 +48,30 @@
       display: flex;
       flex-direction: column;
 
-      .tablet-dashed-line {
+      .dashed-line {
          height: 1px;
          width: 52px;
          margin: 0 0 0 19px;
          background-image: url('./assets/Dashed_header.svg');
       }
 
-      .tablet-header-description {
+      .header-description {
          font-size: 17px;
          width: 221px;
          margin: 16px 0 25px 19px;
          color: white;
       }
+
+      .header-content {
+         display: none;
+      }
       
-      .tablet-header-content {
+      .header-content-alt {
          font-size: 55px;
          line-height: 100%;
          color: white;
 
-         .tablet-header-text {
+         .header-text {
             position: relative;
             display: inline;
 
@@ -95,7 +100,7 @@
       }
    }
 
-   .tablet-sample-image {
+   .sample-image {
       z-index: -1;
       position: absolute;
       top: 56.8%;
@@ -107,5 +112,6 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+   }
    }
 }

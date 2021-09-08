@@ -1,11 +1,16 @@
 @import "./gallery";
 
-.desktop-main-body {
+@mixin mainbody {
+   .main-body {
    background-color: white;
    color: $font-color;
    border-top: 1px solid $line-color;
 
    .description {
+
+      @media screen and (min-width: 1000px) {
+         font-size: $regular-font;
+      }
 
       &::before{
          content: '';
@@ -18,33 +23,61 @@
       }
    }
 
-   .desktop-flex-wrapper {
+   .flex-wrapper {
       position: relative;
-      height: 380px;
+      height: 38.1vw;
+
+      @media screen and (max-width: 820px) {
+         height: 640px;         
+      }
       
       a{
          color: $anchor-color;
       }
 
-      .desktop-big{
+      .big{
          position: absolute;
          top: 20.57%;
          left: 10.8%;
          width: 37.5%;
          margin-top: 2.2%;
-         font-size: 25px;
+         font-size: math.div(30, 1140)*95vw;
+
+         @media screen and (max-width: 820px) {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 88%;
+            margin: auto;
+            margin-top: 18%;
+            font-size: 30px;
+         }
 
          &::before{
             background-image: url('./assets/Dashed_103.svg');
          }
       }
-      .desktop-info{
+      .info{
          position: absolute;
          top: 20.57%;
          left: 66.5%;
          width: 264px;
          margin-top: 2.2%;
          font-size: 17px;
+
+         @media screen and (max-width: 820px) {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 264px;
+            margin-left: 5.5%;
+            margin-top: 25%;
+            font-size: 17px;
+         }
+
+         @media screen and (min-width: 1200px) {
+            font-size: math.div(17, 1140)*95vw;
+         }
 
          &::before{
             background-image: url('./assets/Dashed_103.svg');
@@ -81,12 +114,20 @@
       }
    }
 
-   .desktop-title {
+   @include gallery;
+
+   .title {
       position: relative;
       margin: 4.75% 0 4.75% 0;
       text-align: center;
       color: $desktop-green;
-      font-size: 17px;
+      font-size: $regular-font;
+
+      @media screen and (max-width: 820px) {
+         position: relative;
+         margin: 30px 0 50px 0;
+         font-size: 17px;
+      }
 
       &::before {
          position: absolute;
@@ -96,15 +137,23 @@
          width: 100%;
          height: 1px;
          border-top: 1px solid $line-color;
+
+         @media screen and (max-width: 820px) {
+            top: -140%;
+         }
       }
    }
 
-   .desktop-middle {
+   .middle {
       position: relative;
       padding-bottom: 9.3%;
       margin: auto;
       text-align: center;
       width: 51vw;
+
+      @media screen and (max-width: 820px) {
+         width: 88%;
+      }
 
       &::before{
          left: 50%;
@@ -113,7 +162,7 @@
       }
    }
 
-   .desktop-sample-image-2{
+   .sample-image-2{
       margin: auto;
       margin-bottom: 9.3%;
       width: 76.75%;
@@ -122,22 +171,43 @@
       background-image: url('./assets/DellaSpina/SPRDdigital_DellaSpina_kako-deluje_monitor_listing.png');
       background-size: contain;
       background-repeat: no-repeat;
+      background-position: center;
+
+      @media screen and (max-width: 820px) {
+         width: 92%;
+         height: 56vw;
+         max-height: 100vh;
+      }
    }
 
-   .desktop-grid{
+   .grid{
       display: grid;
       grid-template-rows: 46.35% 46.35%;
       grid-template-columns: 3.65% 25.95% 7.7% 23.3% 7.5% 25.95% 5.95%;
       row-gap: 7.3%;
       width: 80%;
       height: 80vw;
-      min-height: 800px;
       margin: auto;
       margin-bottom: 9.3%;
+
+      @media screen and (max-width: 820px) {
+         display: block;
+         width: 88%;
+         height: 100%;
+         margin: auto;
+         margin-top: 65px;
+         margin-bottom: 9.3%;
+      }
       
-      .desktop-bottom {
+      .bottom {
          position: relative;
          margin-top: 28px;
+
+         @media screen and (max-width: 820px) { 
+            margin: auto;           
+            margin-top: 84px;
+            margin-bottom: 9.3%;
+         }
 
          &.first {
             grid-column: 1 / 3;
@@ -156,10 +226,18 @@
 
 
 
-      .desktop-cutout {
+      .cutout {
          background-image: url('./assets/DellaSpina/SPRDdigital_DellaSpina_izsek.png');
          background-size: cover;
          background-repeat: no-repeat;
+
+         @media screen and (max-width: 820px) {
+            margin: auto;
+            width: 100%;
+            height: 72vw;
+            max-height: 486px;
+            max-width: 580px;
+         }
 
          &.first {
             grid-column: 4 / 7;
@@ -175,5 +253,6 @@
             box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 40px 0 rgba(0, 0, 0, 0.19);
          }
       }
+   }
    }
 }

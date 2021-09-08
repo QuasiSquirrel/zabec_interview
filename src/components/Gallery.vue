@@ -1,5 +1,5 @@
 <template>
-   <div :class="device + '-gallery'">
+   <div class="gallery">
       <div id="arrow-left" v-show="device === 'desktop'" @click="previousImage"></div>
          <slider ref="slider" :options="options" @slide='slide' @tap='onTap' @init="onInit">
             <slideritem v-for="(item, index) in gallery" :key="index" :style="{ backgroundImage: 'url(/img/DellaSpina/' + item + ')'}">

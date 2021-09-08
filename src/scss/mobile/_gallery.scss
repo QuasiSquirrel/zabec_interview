@@ -1,4 +1,5 @@
-.mobile-gallery {
+@mixin gallery-mb{
+   .gallery {
    z-index: 2;
    position: relative;
    height: 100vh;
@@ -43,5 +44,6 @@
             background-color: white;
          }
       }
+   }
    }
 }
